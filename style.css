@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.count-display {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.count-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+#increment,
+#decrement {
+    font-size: 32px;
+    padding: 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+#reset {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+#reset:hover {
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.5);
+}
+
+#undo {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+#undo:hover {
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.5);
+}
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .container {
+    background: #0f3460;
+    color: white;
+}
+
+body.dark-mode h1 {
+    color: white;
+}
+
+body.dark-mode .count-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .dark-mode-btn {
+    background: rgba(0, 0, 0, 0.3);
+}
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .count-display {
+        padding: 30px;
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+    .count-label {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    #increment,
+    #decrement {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .dark-mode-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .count-display {
+        padding: 25px;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .count-label {
+        font-size: 11px;
+    }
+
+    .button-group {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    #increment,
+    #decrement {
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .dark-mode-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .count-display {
+        padding: 20px;
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #increment,
+    #decrement {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
